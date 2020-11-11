@@ -10,6 +10,7 @@ namespace FreeMail.Domain
         public string Sender { get; set; }
         public List<string> CCAddresses { get; set; }
         public string Body { get; set; }
+        public DateTime DateSentLocal { get; set; }
 
         public Email(Message message)
         {
@@ -20,6 +21,17 @@ namespace FreeMail.Domain
             {
                 CCAddresses.Add(cc.ToString());
             }
+            var textBody = message.FindFirstPlainTextVersion();
+            var htmlBody = message.FindFirstHtmlVersion();
+            if (textBody != null)
+            {
+                Body = textBody.GetBodyAsText();
+            }
+            else if (htmlBody != null)
+            {
+                Body = htmlBody.GetBodyAsText();
+            }
+            DateSentLocal = message.Headers.DateSent.ToLocalTime();
         }
     }
 }

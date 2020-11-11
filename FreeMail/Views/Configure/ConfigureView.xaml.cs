@@ -22,5 +22,18 @@ namespace FreeMail.Views.ConfigureView
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void LoginClick(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.EmailAddress = EmailAddressTextBox.Text.Trim().ToLower();
+            Settings.Default.Password = PasswordTextBox.Text.Trim();
+            Settings.Default.Configured = true;
+            Settings.Default.Save();
+        }
     }
 }
