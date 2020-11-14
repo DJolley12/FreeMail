@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeMail.Service", "EmailNotifier.Service\FreeMail.Service.csproj", "{C92B961B-B352-4176-A586-DC6390282782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeMail.Domain", "FreeMail.Domain\FreeMail.Domain.csproj", "{756E3FC7-F327-4F9F-9BC2-847D772A4B56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeMail.Domain", "EmailNotifier.Domain\FreeMail.Domain.csproj", "{80268B8B-A811-4241-BBBC-F317B89CB2F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeMail.Service", "FreeMail.Service\FreeMail.Service.csproj", "{A7DEBB55-D0B7-4A2F-9F06-807996CF4C9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeMail", "FreeMail\FreeMail.csproj", "{CD362F9A-AA4C-4084-AEA4-B4DF42440515}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMail", "WpfApp1\FreeMail.csproj", "{B3ECA264-1527-4BE9-8E37-3E08CDBF1999}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C92B961B-B352-4176-A586-DC6390282782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C92B961B-B352-4176-A586-DC6390282782}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C92B961B-B352-4176-A586-DC6390282782}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C92B961B-B352-4176-A586-DC6390282782}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80268B8B-A811-4241-BBBC-F317B89CB2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80268B8B-A811-4241-BBBC-F317B89CB2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80268B8B-A811-4241-BBBC-F317B89CB2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80268B8B-A811-4241-BBBC-F317B89CB2F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD362F9A-AA4C-4084-AEA4-B4DF42440515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD362F9A-AA4C-4084-AEA4-B4DF42440515}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD362F9A-AA4C-4084-AEA4-B4DF42440515}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD362F9A-AA4C-4084-AEA4-B4DF42440515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756E3FC7-F327-4F9F-9BC2-847D772A4B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756E3FC7-F327-4F9F-9BC2-847D772A4B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756E3FC7-F327-4F9F-9BC2-847D772A4B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756E3FC7-F327-4F9F-9BC2-847D772A4B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DEBB55-D0B7-4A2F-9F06-807996CF4C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DEBB55-D0B7-4A2F-9F06-807996CF4C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DEBB55-D0B7-4A2F-9F06-807996CF4C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DEBB55-D0B7-4A2F-9F06-807996CF4C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3ECA264-1527-4BE9-8E37-3E08CDBF1999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3ECA264-1527-4BE9-8E37-3E08CDBF1999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3ECA264-1527-4BE9-8E37-3E08CDBF1999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3ECA264-1527-4BE9-8E37-3E08CDBF1999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

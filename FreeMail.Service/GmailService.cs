@@ -25,7 +25,7 @@ namespace FreeMail.Service
         private void Authenticate()
         {
             var previousHour = DateTime.Now.Hour - 2;
-            if (LastLoggedIn == null || LastLoggedIn.Day != DateTime.Now.Day && LastLoggedIn.Hour <= previousHour)
+            if (LastLoggedIn == null || LastLoggedIn.Day != DateTime.Now.Day || LastLoggedIn.Hour <= previousHour)
             {
                 client = new Pop3Client();
                 client.Connect("pop.gmail.com", 995, true);
@@ -39,13 +39,27 @@ namespace FreeMail.Service
             Authenticate();
             var count = client.GetMessageCount();
             var emails = new List<Email>();
-            for (int i = 1; i < count; i++)
+            for (int i = count - 10; i < count; i++)
             {
-                var message = client.GetMessage(i);
-                var email = new Email(message);
-                emails.Add(email);
+                try
+                {
+                    var message = client.GetMessage(i);
+                    var email = new Email(message);
+                    emails.Add(email);
+                }
+                catch (Exception)
+                {
+
+                }
             }
             return emails;
+        }
+
+        public Email GetMostRecentEmail()
+        {
+            var message = GetMostRecentMessage();
+            var email = new Email(message);
+            return email;
         }
 
         public Message GetMostRecentMessage()

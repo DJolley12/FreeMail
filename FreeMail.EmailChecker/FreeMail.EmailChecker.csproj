@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-EmailChecker-5AD4C520-5CE4-4B77-A895-5D14BFEF5031</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.6" />
+    <PackageReference Include="Tulpep.NotificationWindow" Version="1.1.37" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FreeMail.Domain\FreeMail.Domain.csproj" />
+    <ProjectReference Include="..\FreeMail.Service\FreeMail.Service.csproj" />
+  </ItemGroup>
+</Project>
